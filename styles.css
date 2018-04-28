@@ -1,13 +1,9 @@
-div .section {
-	background-color: green;
-}
-
-
 /*  SECTIONS  */
 .section {
 	clear: both;
 	padding: 0px;
 	margin: 0px;
+	background-color: green;
 }
 
 /*  COLUMN SETUP  */
