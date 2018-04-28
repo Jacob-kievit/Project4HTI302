@@ -1,0 +1,51 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+h1{
+	font-size: 48px;
+	margin: 10px 10px 10px 0;
+	padding-bottom: 5px;
+}
+h2{
+	font-size: 34px;
+	margin: 10px 10px 10px 0;
+}
+h3{
+	font-size: 24px;
+	margin: 10px 10px 10px 0;
+}
+h4{
+	font-size: 17px;
+	margin: 10px 10px 10px 0;
+}
+h5{
+	font-size: 12px;
+	margin: 10px 10px 10px 0;
+}
+h6{
+	font-size: 11px;
+	margin: 10px 10px 10px 0;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+a{
+	color: black;
+	font-size: 24px;
+	text-decoration: none;
+}
+a:hover{
+	color: #76bf6f;
+	padding: 3px;
+}
+a:visited{
+	color: #4f7f4a;
+}
+p a{
+	font-size: 18px;
+	font-weight: bold;
+}
+img{
+	width: 70%;
+}
