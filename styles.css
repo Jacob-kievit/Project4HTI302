@@ -1,123 +1,23 @@
-/*  SECTIONS  */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-	background-color: green;
-}
+/***
+ * Buttons:
+ */
 
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-.col:first-child { margin-left: 0; }
+/**
+ * Button:
+ * `.btn` - Buttons are used primarily to link to pages in the general body of the website; links not in the 
+ * navbar.
+ *
+ *	@example
+ *	<button class='btn'>Primary button</button>
+ */
 
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-
-/*  GRID OF TEN  */
-.span_10_of_10 {
-	width: 100%;
-}
-
-.span_9_of_10 {
-  	width: 89.84%;
-}
-
-.span_8_of_10 {
-  	width: 79.68%;
-}
-
-.span_7_of_10 {
-  	width: 69.52%;
-}
-
-.span_6_of_10 {
-  	width: 59.36%;
-}
-
-.span_5_of_10 {
-  	width: 49.2%;
-}
-
-.span_4_of_10 {
-  	width: 39.04%;
-}
-
-.span_3_of_10 {
-  	width: 28.88%;
-}
-
-.span_2_of_10 {
-  	width: 18.72%;
-}
-
-.span_1_of_10 {
-  	width: 8.56%;
-}
-
-/*  GO FULL WIDTH BELOW 480 PIXELS */
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-	
-    .span_1_of_10, .span_2_of_10, .span_3_of_10, .span_4_of_10, .span_5_of_10, .span_6_of_10, .span_7_of_10, .span_8_of_10, .span_9_of_10, .span_10_of_10 {
-	width: 100%; 
-	}
-}
-
-h1,h2,h3,h4,h5,h6{
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-h1{
-	font-size: 48px;
-	margin: 10px 10px 10px 0;
-	padding-bottom: 5px;
-}
-h2{
-	font-size: 34px;
-	margin: 10px 10px 10px 0;
-}
-h3{
-	font-size: 24px;
-	margin: 10px 10px 10px 0;
-}
-h4{
-	font-size: 17px;
-	margin: 10px 10px 10px 0;
-}
-h5{
-	font-size: 12px;
-	margin: 10px 10px 10px 0;
-}
-h6{
-	font-size: 11px;
-	margin: 10px 10px 10px 0;
-}
-p{
-	margin: 0;
-	padding: 0;
-}
-a{
-	color: black;
-	font-size: 24px;
+.btn {
+	font-size: 15px;
+	background-color: #74f2b3;
+	padding: 10px;
 	text-decoration: none;
 }
-a:hover{
-	color: #76bf6f;
-	padding: 3px;
-}
-a:visited{
-	color: #4f7f4a;
-}
-p a{
-	font-size: 18px;
-	font-weight: bold;
-}
-img{
-	width: 70%;
+
+body {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
