@@ -23,6 +23,119 @@ body {
 }
 
 /***
+ * Image:
+ */
+
+/**
+ * Image:
+ * `.img` - images are used primarily to show an image.
+ *
+ *		@example
+ *		 <img class='img' src="stuf.jpg" alt="stuff" height="50" width="50"> 
+ */
+
+.img {
+	
+	background-color: #74f2b3;
+	padding: 10px;
+}
+
+/***
+ * List:
+ */
+
+/**
+ * List:
+ * `.list` - Lists are used primarily to list stuff.
+ *
+ *		@example
+ *		<ul class='list'>
+ *			<li>stuff 1</li>
+ *			<li>stuff 2</li>
+ *			<li>stuff 3</li>
+ *		  </ul> 
+ */
+
+.list {
+	
+	background-color: #74f2b3;
+	padding: 10px;
+}
+
+/***
+ * Data Table:
+ */
+
+/**
+ * table:
+ * `.table` - Tables are used primarily to put things in tables.
+ *
+ *		@example
+ *		<table class='table' style="width:100%">
+ *			<tr>
+ *				<th>First Name</th>
+ *				<th>Last Name</th>
+ *				<th>Age</th>
+ *		    </tr>
+ *		    <tr>
+ *				<td>jon</td>
+ *				<td>doe</td>
+ *				<td>50</td>
+ *		    </tr>
+ *		    <tr>
+ *				<td>jane</td>
+ *				<td>doe</td>
+ *				<td>49</td>
+ *		    </tr>
+ *		</table>  
+ */
+
+.table {
+	
+	background-color: #74f2b3;
+	padding: 10px;
+}
+
+/***
+ * Text field:
+ */
+
+/**
+ * Text:
+ * `.text` - Text inputs are used primarily to enter text in a text field.
+ *
+ *		@example
+ *		<input class='text' type="text" name="fname">
+ */
+
+.text {
+	
+	background-color: #74f2b3;
+	padding: 10px;
+}
+
+/***
+ * Text area:
+ */
+
+/**
+ * Text Area:
+ * `.area` - Text Areas are used primarily to enter large amounts of text such as reviews.
+ *
+ *		@example
+ *		<textarea class='area' rows="4" cols="50"></textarea>
+ */
+
+.area {
+	
+	background-color: #74f2b3;
+	padding: 10px;
+}
+
+
+
+
+/***
 * Headings:
 */
 
