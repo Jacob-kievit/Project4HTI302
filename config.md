@@ -52,11 +52,18 @@
 			<li><a href='#data-table'>Tables</a></li>
 			<li><a href='#navmenu'>Navigation</a></li>
 			<li><a href='#text-field'>Text Fields</a></li>
+			<li><a href='#test-area'>Text Areas</a></li>
 			<li><a href='#checkbox-buttons'>Checkboxes</a></li>
+			<li><a href='#radio-buttons'>Radio Buttons</a></li>
+			<li><a href='#dropdown-menu'>Dropdown Menus</a></li>
+			<li><a href='#alert'>Alerts</a></li>
+			<li><a href='#headings'>Headings</a></li><li>
+			<li><a href='#paragraph'>Paragraphs</a></li>
+			<li><a href='#links'>Links</a></li>
+			<li><a href='#grid-layout'>Page Layout</a></li>
+			<li><a href='#color-palette'>Color Palette</a></li>
 			<li><a href='#'></a></li>
 			<li><a href='#'></a></li>
-			<li><a href='#'></a></li>
-			<li><a href='#'></a></li><li>
 		</ul>
 	</div>
 	<div style='margin-left:25%;padding:1px 16px;height:1000px;' class='sg-container' sg-content></div>
