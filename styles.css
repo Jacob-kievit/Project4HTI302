@@ -192,6 +192,31 @@ body {
 }
 
 /***
+ * Alert:
+ */
+
+/**
+ * Alert:
+ * `.alert` - Alerts are used primarily to alert a user.
+ *
+ *		@example
+ *		<p>Click the button to display a example alert</p>
+ *
+ *		<button onclick="myFunction()">ALERT</button>
+ *
+ *		<script>
+ *			function myFunction() {
+ *				alert(" You will be signed out in 10 minutes due to inactivity");
+ *			}
+ *		</script>
+ */
+
+.alert {
+	
+	padding: 10px;
+}
+
+/***
 * Headings:
 */
 
