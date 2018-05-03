@@ -132,8 +132,64 @@ body {
 	padding: 10px;
 }
 
+/***
+ * Checkbox buttons:
+ */
 
+/**
+ * Checkbox buttons:
+ * `.checkbox` - Checkbox buttons are used primarily to confirm a user agrees to something such as a user agreement.
+ *
+ *		@example
+ *		<input class= 'radio' type="checkbox" name="A" value="A"> I agree to the terms of servcie <br>
+ */
 
+.checkbox {
+	
+	padding: 10px;
+}
+
+/***
+ * Radio buttons:
+ */
+
+/**
+ * Radio buttons:
+ * `.radio` - Radio buttons are used primarily to enter multiple choice answers or making selections.
+ *
+ *		@example
+ *		<input class= 'radio' type="radio" name="A" value="A"> A<br>
+ *		<input class= 'radio' type="radio" name="B" value="B"> B<br>
+ *		<input class= 'radio' type="radio" name="C" value="C"> C<br>
+ * 		<input class= 'radio' type="radio" name="D" value="D"> D<br>
+ */
+
+.radio {
+	
+	padding: 10px;
+}
+
+/***
+ * Dropdown Menu:
+ */
+
+/**
+ * Dropdown Menu:
+ * `.select` - Radio buttons are used primarily to select options from a menu.
+ *
+ *		@example
+ *		<select class='select'>
+ *			<option value="Stuff1">Stuff1</option>
+ *			<option value="Stuff2">Stuff2</option>
+ *			<option value="Stuff3">Stuff3</option>
+ *			<option value="Stuff4">Stuff4</option>
+ *		</select>
+ */
+
+.select {
+	
+	padding: 10px;
+}
 
 /***
 * Headings:
