@@ -3,6 +3,24 @@ body {
 }
 
 /***
+ * Typography:
+ */
+
+/**
+ * Font:
+ * `.primary-font` - Used to declare the font for the entier page for Share Economy, Inc. by adding the class to the `body` tag of each page.
+ *
+ *		@example
+ *		<body class='primary-font'>
+ *		Page contents
+ *		</body>
+ */
+
+.primary-font {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/***
  * Buttons:
  */
 
@@ -36,7 +54,7 @@ body {
 
 .img {
 	
-	background-color: #74f2b3;
+	background-color: #ffffff;
 	padding: 10px;
 }
 
@@ -58,7 +76,7 @@ body {
 
 .list {
 	
-	background-color: #74f2b3;
+	background-color: #ffffff;
 	padding: 10px;
 }
 
@@ -89,11 +107,70 @@ body {
  *		    </tr>
  *		</table>  
  */
-
+ 
 .table {
 	
-	background-color: #74f2b3;
+	background-color: #ffffff;
 	padding: 10px;
+}
+ 
+ /***
+ * Navmenu:
+ */
+ 
+ /**
+ * Navmenu:
+ * `.nav` - Used to contain the navbar.
+ * 
+ * `.nav ul` - Used to style the list for the main navigation bar.
+ *
+ * `.nav li` - Used to make the navbar contents float left.
+ *
+ * `.nav li a` - Used to style the individual links.
+ *
+ * `.nav li a:hover` - Used to style the individual links on hover.
+ *
+ *		@example
+ *		<div class='nav'>
+ *		<ul>
+ *		<li><a>Item 1</a></li>
+ *		<li><a>Item 2</a></li>
+ *		<li><a>Item 3</a></li>
+ *		</ul>
+ *		</div>
+ */
+ 
+ .nav {
+	 width: 100%;
+	 background-color: #105934;
+	 clear: both;
+	 padding: 0;
+	 display: block;
+ }
+ 
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #105934;
+	overflow: hidden;
+}
+
+.nav li {
+	float: left;
+	background-color: #105934;
+}
+
+.nav li a {
+    display: block;
+    color: #ffffff;
+	text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #76bf6f;
 }
 
 /***
@@ -110,7 +187,7 @@ body {
 
 .text {
 	
-	background-color: #74f2b3;
+	background-color: #ffffff;
 	padding: 10px;
 }
 
@@ -128,7 +205,7 @@ body {
 
 .area {
 	
-	background-color: #74f2b3;
+	background-color: #ffffff;
 	padding: 10px;
 }
 
@@ -271,7 +348,7 @@ h4{
 
 /**
 * Heading 5:
-* `h5` - .
+* `h5` - Used for footer links and text under Header 4.
 *
 *		@example
 *		<h5>Heading 5</h5>
@@ -283,7 +360,7 @@ h5{
 
 /**
 * Heading 6:
-* `h6` - .
+* `h6` - Used for copyright on footer.
 *
 *		@example
 *		<h6>Heading 6</h6>
@@ -338,7 +415,12 @@ p a{
 
 
 /***
-* Grid Layout
+* Grid Layout:
+*/
+
+/**
+* Grid Layout:
+*
 * `.section` - splits up the page horizontally. You'll need a few of these to break up the content, and you can use them
 * in your main wrapper, or within other divs.
 *
@@ -349,6 +431,7 @@ p a{
 * is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
 *
 * `.span_1_of_3` - specifies the width of the column. Using percentages means it's 100% fluid.
+*
 * `@media queries` - as soon as the screen size gets less than 480 pixels the columns stack and the margins disappear.
 *
 *		@example
@@ -422,7 +505,6 @@ p a{
 	clear: both;
 	padding: 0px;
 	margin: 0px;
-	background-color: green;
 }
 
 .col {
@@ -488,12 +570,19 @@ p a{
 /***
  * Color palette:
  * These are the colors for the website:
+ *
  * `#74f2b3` - Used for buttons.
+ *
  * `#105934` - Used for the navbar background color.
+ *
  * `#76bf6f` - Used as the hover effect for the navbar background color and the active tab.
- * `#c5a5c7` - Used for links.
- * `#c774f2` - Used for visited links and hovered links.
+ *
+ * `#c774f2` - Used for links.
+ *
+ * `#c5a5c7` - Used for visited links and hovered links.
+ *
+ * `#ffffff` - Used for default background color.
  *
  * 		@example
- #		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%' />
+ *		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%'>
  */
