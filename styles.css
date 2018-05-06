@@ -3,6 +3,201 @@ body {
 }
 
 /***
+ * Styleguide Purpose and Philosophy:
+ */
+
+/**
+ * Purpose:
+ * The main function of this styleguide is to highlight the main themes and styles used throughout the Share Economy Inc. website. The styles herein serve as responsive ways for the website to display itself on both desktop and mobile platforms. It also serves as a reusable code base for new pages within the site.
+ */
+ 
+ /**
+ * Philosophies:
+ * User Experience First: The main focus of our design prinicipals is to make the end user's experience as simple and efficient as possible. This is why it is so important to stick to the styles outlined in the guide.
+ * 
+ * Consistency: Consistency is important because it creates trust. And design is all about creating relationships between products and users.
+ * 
+ * Simplicity: By making the site as simply designed as possible, you prevent clutter that gets in the way of the primary philosophy: User Ecperience First.
+ */
+ 
+/***
+* Grid Layout:
+*/
+
+/**
+* Grid Layout:
+*
+* `.section` - splits up the page horizontally. You'll need a few of these to break up the content, and you can use them
+* in your main wrapper, or within other divs.
+*
+* `.col` - divides the section into columns. Each column has a left margin except the first one. Using .col:first-child
+* { margin-left: 0; } means you don't need to use class="last" anywhere. It works in all browsers since IE6.
+*
+* `.group` - solves floating problems, by forcing the section to self clear its children (aka the clearfix hack). This
+* is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
+*
+* `.span_1_of_3` - specifies the width of the column. Using percentages means it's 100% fluid.
+*
+* `@media queries` - as soon as the screen size gets less than 480 pixels the columns stack and the margins disappear. Any sections within the site that need different widths above 480 pixels at varying breakpoints should have a media query declared to adjust the number of columns they span.
+* 
+* Note: Columns in the example are only colored to more clearly show column size.
+*
+*		@example
+*		<div class="section group">
+*		<div class="col span_1_of_10" style="background-color: #ffffff;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #E6E6E6;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #ffffff;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #E6E6E6;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #ffffff;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #E6E6E6;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #ffffff;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #E6E6E6;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #ffffff;">
+*		1 of 10
+*		</div>
+*		<div class="col span_1_of_10" style="background-color: #E6E6E6;">
+*		1 of 10
+*		</div>
+*		</div>
+*		<div class="section group">
+*		<div class="col span_2_of_10" style="background-color: #ffffff;">
+*		2 of 10
+*		</div>
+*		<div class="col span_8_of_10" style="background-color: #E6E6E6;">
+*		8 of 10
+*		</div>
+*		</div>
+*		<div class="section group">
+*		<div class="col span_3_of_10" style="background-color: #ffffff;">
+*		3 of 10
+*		</div>
+*		<div class="col span_7_of_10" style="background-color: #E6E6E6;">
+*		7 of 10
+*		</div>
+*		</div>
+*		<div class="section group">
+*		<div class="col span_4_of_10" style="background-color: #ffffff;">
+*		4 of 10
+*		</div>
+*		<div class="col span_6_of_10" style="background-color: #E6E6E6;">
+*		6 of 10
+*		</div>
+*		</div>
+*		<div class="section group">
+*		<div class="col span_5_of_10" style="background-color: #ffffff;">
+*		5 of 10
+*		</div>
+*		<div class="col span_5_of_10" style="background-color: #E6E6E6;">
+*		5 of 10
+*		</div>
+*		</div>
+*/
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+.span_10_of_10 {
+	width: 100%;
+}
+
+.span_9_of_10 {
+	width: 89.84%;
+}
+
+.span_8_of_10 {
+	width: 79.68%;
+}
+
+.span_7_of_10 {
+	width: 69.52%;
+}
+
+.span_6_of_10 {
+	width: 59.36%;
+}
+
+.span_5_of_10 {
+	width: 49.2%;
+}
+
+.span_4_of_10 {
+	width: 39.04%;
+}
+
+.span_3_of_10 {
+	width: 28.88%;
+}
+
+.span_2_of_10 {
+	width: 18.72%;
+}
+
+.span_1_of_10 {
+	width: 8.56%;
+}
+
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+
+	.span_1_of_10, .span_2_of_10, .span_3_of_10, .span_4_of_10, .span_5_of_10, .span_6_of_10, .span_7_of_10, .span_8_of_10, .span_9_of_10, .span_10_of_10 {
+		width: 100%;
+	}
+}
+
+/***
+ * Color palette:
+ * These are the colors for the website:
+ *
+ * `#74f2b3` - Used for buttons.
+ *
+ * `#105934` - Used for the navbar background color.
+ *
+ * `#76bf6f` - Used as the hover effect for the navbar background color and the active tab.
+ *
+ * `#c774f2` - Used for links.
+ *
+ * `#c5a5c7` - Used for visited links and hovered links.
+ *
+ * `#ffffff` - White. Used for default background color.
+ *
+ * `#000000` - Black. Used for all general and non-heading text. This may be ovveriden in special circumstances.
+ *
+ * 		@example
+ *		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%'>
+ */
+
+/***
  * Typography:
  */
 
@@ -12,12 +207,138 @@ body {
  *
  *		@example
  *		<body class='primary-font'>
- *		Page contents
+ *		<p>The primary font for the website should be Palatino Linotype, followed by Book Antiqua as the secondary.</p>
  *		</body>
  */
 
 .primary-font {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/***
+* Headings:
+*/
+
+/**
+* Heading 1:
+* `h1` - Used soley for the names of the service/provider.
+*
+*		@example
+*		<h1>Heading 1</h1>
+*/
+h1{
+	font-size: 48px;
+	margin: 10px 10px 10px 0;
+	padding-bottom: 5px;
+}
+
+/**
+* Heading 2:
+* `h2` - Used for paragraph and description headings.
+*
+*		@example
+*		<h2>Heading 2</h2>
+*/
+h2{
+	font-size: 34px;
+	margin: 10px 10px 10px 0;
+}
+
+/**
+* Heading 3:
+* `h3` - Used for subheadings on lists, etc. within the heading 2 sections.
+*
+*		@example
+*		<h3>Heading 3</h3>
+*/
+h3{
+	font-size: 24px;
+	margin: 10px 10px 10px 0;
+}
+
+/**
+* Heading 4:
+* `h4` - Used for footer headings only.
+*
+*		@example
+*		<h4>Heading 4</h4>
+*/
+h4{
+	font-size: 17px;
+	margin: 10px 10px 10px 0;
+}
+
+/**
+* Heading 5:
+* `h5` - Used for footer links and text under Header 4.
+*
+*		@example
+*		<h5>Heading 5</h5>
+*/
+h5{
+	font-size: 12px;
+	margin: 10px 10px 10px 0;
+}
+
+/**
+* Heading 6:
+* `h6` - Used for copyright on footer.
+*
+*		@example
+*		<h6>Heading 6</h6>
+*/
+h6{
+	font-size: 11px;
+	margin: 10px 10px 10px 0;
+}
+
+/***
+* Paragraphs:
+* `p` - Used for general content text. Font size is 12pt with a medium weight and a normal line height. All text should be left-aligned by default, unless otherwise specified in another id or class.
+*
+*		@example
+*		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+*/
+
+p {
+	font-size: 12pt;
+	font-weight: medium;
+	line-height: normal;
+}
+
+/***
+* Links:
+*/
+
+/**
+* Basic Links:
+* `a` - Used whenever a link is needed.
+*
+*		@example
+*		<a>This is a sample link!</a>
+*/
+a{
+	color: #c774f2;
+	font-size: 24px;
+	text-decoration: none;
+}
+a:hover{
+	color: #c5a5c7;
+}
+a:visited{
+	color: #c5a5c7;
+}
+
+/**
+* Links inside paragraphs:
+* `a` - Used whenever a link is needed inside of a normal paragraph.
+*
+*		@example
+*		<p>This is normal text, <a>but this is a sample link!</a></p>
+*/
+p a{
+	font-size: 18px;
+	font-weight: bold;
 }
 
 /***
@@ -41,15 +362,15 @@ body {
 }
 
 /***
- * Image:
+ * Images:
  */
 
 /**
- * Image:
- * `.img` - images are used primarily to show an image.
+ * Images:
+ * `img` - Images should always have `width="100%"` with the height auto-calculated. They should also have a `max-width` property to ensure that the image does not get too large on larger screens.
  *
  *		@example
- *		 <img class='img' src="stuf.jpg" alt="stuff" height="50" width="50"> 
+ *		 <img class='img' src="tomi.jpg" alt="Our wonderful professor, Tomi" width="100%" style="max-width: 150px;"> 
  */
 
 .img {
@@ -59,12 +380,12 @@ body {
 }
 
 /***
- * List:
+ * Lists:
  */
 
 /**
- * List:
- * `.list` - Lists are used primarily to list stuff.
+ * Lists:
+ * `.list` - Used to show lists in general content areas.
  *
  *		@example
  *		<ul class='list'>
@@ -81,11 +402,11 @@ body {
 }
 
 /***
- * Data Table:
+ * Data Tables:
  */
 
 /**
- * table:
+ * Tables:
  * `.table` - Tables are used primarily to put things in tables.
  *
  *		@example
@@ -174,30 +495,26 @@ body {
 }
 
 /***
- * Text field:
+ * Form Elements:
  */
 
 /**
- * Text:
- * `.text` - Text inputs are used primarily to enter text in a text field.
+ * Text Fields:
+ * `.text-field` - Text inputs are used to enter text where only one line of short input is needed.
  *
  *		@example
  *		<input class='text' type="text" name="fname">
  */
 
-.text {
+.text-field {
 	
 	background-color: #ffffff;
 	padding: 10px;
 }
 
-/***
- * Text area:
- */
-
 /**
- * Text Area:
- * `.area` - Text Areas are used primarily to enter large amounts of text such as reviews.
+ * Text Areas:
+ * `.area` - Text Areas are used primarily to enter large amounts of text such as reviews and messages.
  *
  *		@example
  *		<textarea class='area' rows="4" cols="50"></textarea>
@@ -209,13 +526,9 @@ body {
 	padding: 10px;
 }
 
-/***
- * Checkbox buttons:
- */
-
 /**
- * Checkbox buttons:
- * `.checkbox` - Checkbox buttons are used primarily to confirm a user agrees to something such as a user agreement.
+ * Checkboxes:
+ * `.checkbox` - Checkbox buttons are used primarily to confirm a user agrees to something such as a user agreement or to have them select multiple values from a list in a form.
  *
  *		@example
  *		<input class= 'radio' type="checkbox" name="A" value="A"> I agree to the terms of servcie <br>
@@ -226,13 +539,9 @@ body {
 	padding: 10px;
 }
 
-/***
- * Radio buttons:
- */
-
 /**
  * Radio buttons:
- * `.radio` - Radio buttons are used primarily to enter multiple choice answers or making selections.
+ * `.radio` - Radio buttons are used primarily to enter multiple choice answers or make selections where only one answer is allowed.
  *
  *		@example
  *		<input class= 'radio' type="radio" name="A" value="A"> A<br>
@@ -246,13 +555,10 @@ body {
 	padding: 10px;
 }
 
-/***
- * Dropdown Menu:
- */
-
 /**
- * Dropdown Menu:
- * `.select` - Radio buttons are used primarily to select options from a menu.
+ * Dropdown Menus:
+ *
+ * `.select` - Dropdown menues are used to select an option from a predetermined list.
  *
  *		@example
  *		<select class='select'>
@@ -269,12 +575,9 @@ body {
 }
 
 /***
- * Alert:
- */
-
-/**
- * Alert:
- * `.alert` - Alerts are used primarily to alert a user.
+ * Alerts:
+ *
+ * `.alert` - Alerts are used primarily to alert a user to a specific event or error that has occured.
  *
  *		@example
  *		<p>Click the button to display a example alert</p>
@@ -294,306 +597,8 @@ body {
 }
 
 /***
-* Headings:
-*/
-
-/**
-* Heading 1:
-* `h1` - Used soley for the names of the service/provider.
-*
-*		@example
-*		<h1>Heading 1</h1>
-*/
-h1{
-	font-size: 48px;
-	margin: 10px 10px 10px 0;
-	padding-bottom: 5px;
-}
-
-/**
-* Heading 2:
-* `h2` - Used for paragraph and description headings.
-*
-*		@example
-*		<h2>Heading 2</h2>
-*/
-h2{
-	font-size: 34px;
-	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 3:
-* `h3` - Used for subheadings on lists, etc. within the heading 2 sections.
-*
-*		@example
-*		<h3>Heading 3</h3>
-*/
-h3{
-	font-size: 24px;
-	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 4:
-* `h4` - Used for footer headings only.
-*
-*		@example
-*		<h4>Heading 4</h4>
-*/
-h4{
-	font-size: 17px;
-	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 5:
-* `h5` - Used for footer links and text under Header 4.
-*
-*		@example
-*		<h5>Heading 5</h5>
-*/
-h5{
-	font-size: 12px;
-	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 6:
-* `h6` - Used for copyright on footer.
-*
-*		@example
-*		<h6>Heading 6</h6>
-*/
-h6{
-	font-size: 11px;
-	margin: 10px 10px 10px 0;
-}
-
-/***
-* Paragraph:
-* `p` - Used for general content text.
-*
-*		@example
-*		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-*/
-
-/***
-* Links:
-*/
-
-/**
-* Basic Links:
-* `a` - Used whenever a link is needed.
-*
-*		@example
-*		<a>This is a sample link!</a>
-*/
-a{
-	color: #c774f2;
-	font-size: 24px;
-	text-decoration: none;
-}
-a:hover{
-	color: #c5a5c7;
-}
-a:visited{
-	color: #c5a5c7;
-}
-
-/**
-* Links inside paragraphs:
-* `a` - Used whenever a link is needed inside of a normal paragraph.
-*
-*		@example
-*		<p>This is normal text. <a>but this is a sample link!</a></p>
-*/
-p a{
-	font-size: 18px;
-	font-weight: bold;
-}
-
-
-/***
-* Grid Layout:
-*/
-
-/**
-* Grid Layout:
-*
-* `.section` - splits up the page horizontally. You'll need a few of these to break up the content, and you can use them
-* in your main wrapper, or within other divs.
-*
-* `.col` - divides the section into columns. Each column has a left margin except the first one. Using .col:first-child
-* { margin-left: 0; } means you don't need to use class="last" anywhere. It works in all browsers since IE6.
-*
-* `.group` - solves floating problems, by forcing the section to self clear its children (aka the clearfix hack). This
-* is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
-*
-* `.span_1_of_3` - specifies the width of the column. Using percentages means it's 100% fluid.
-*
-* `@media queries` - as soon as the screen size gets less than 480 pixels the columns stack and the margins disappear.
-*
-*		@example
-*		<div class="section group">
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		<div class="col span_1_of_10">
-*		1 of 10
-*		</div>
-*		</div>
-*		<div class="section group">
-*		<div class="col span_2_of_10">
-*		2 of 10
-*		</div>
-*		<div class="col span_8_of_10">
-*		8 of 10
-*		</div>
-*		</div>
-*		<div class="section group">
-*		<div class="col span_3_of_10">
-*		3 of 10
-*		</div>
-*		<div class="col span_7_of_10">
-*		7 of 10
-*		</div>
-*		</div>
-*		<div class="section group">
-*		<div class="col span_4_of_10">
-*		4 of 10
-*		</div>
-*		<div class="col span_6_of_10">
-*		6 of 10
-*		</div>
-*		</div>
-*		<div class="section group">
-*		<div class="col span_5_of_10">
-*		5 of 10
-*		</div>
-*		<div class="col span_5_of_10">
-*		5 of 10
-*		</div>
-*		</div>
-*/
-
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-.col:first-child { margin-left: 0; }
-
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-.group { zoom:1; /* For IE 6/7 */ }
-
-.span_10_of_10 {
-	width: 100%;
-}
-
-.span_9_of_10 {
-	width: 89.84%;
-}
-
-.span_8_of_10 {
-	width: 79.68%;
-}
-
-.span_7_of_10 {
-	width: 69.52%;
-}
-
-.span_6_of_10 {
-	width: 59.36%;
-}
-
-.span_5_of_10 {
-	width: 49.2%;
-}
-
-.span_4_of_10 {
-	width: 39.04%;
-}
-
-.span_3_of_10 {
-	width: 28.88%;
-}
-
-.span_2_of_10 {
-	width: 18.72%;
-}
-
-.span_1_of_10 {
-	width: 8.56%;
-}
-
-@media only screen and (max-width: 480px) {
-	.col {  margin: 1% 0 1% 0%; }
-
-	.span_1_of_10, .span_2_of_10, .span_3_of_10, .span_4_of_10, .span_5_of_10, .span_6_of_10, .span_7_of_10, .span_8_of_10, .span_9_of_10, .span_10_of_10 {
-		width: 100%;
-	}
-}
-
-/***
- * Color palette:
- * These are the colors for the website:
- *
- * `#74f2b3` - Used for buttons.
- *
- * `#105934` - Used for the navbar background color.
- *
- * `#76bf6f` - Used as the hover effect for the navbar background color and the active tab.
- *
- * `#c774f2` - Used for links.
- *
- * `#c5a5c7` - Used for visited links and hovered links.
- *
- * `#ffffff` - Used for default background color.
- *
- * 		@example
- *		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%'>
- */
-
-
-/***
  * Popups:
- */
-
-/**
- * Popups:
+ * 
  * `.popup` - Popups are used primarily to let the user know something like they have Caps lock on or their password is weak.
  *
  *		@example

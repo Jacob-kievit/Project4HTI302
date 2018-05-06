@@ -9,6 +9,7 @@
 	<style>
 	body {
 		margin: 0;
+		min-width:750px;
 	}
 	.navigation {
 		padding-top: 69px;
@@ -17,17 +18,38 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
+		min-width: 165px;
 		width: 25%;
 		background-color: #f1f1f1;
 		height: 100%; /* Full height */
 		position: fixed; /* Make it stick, even on scroll */
 		overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	}
+	.navigation ul li {
+		display: block;
+		height: auto;
+	}
+	.navigation ul li ul {
+		display: block;
+		height: auto;
+	}
+	.navigation ul li ul li {
+		padding-left: 10px;
+		min-width: 155px;
+	}
+	.navigation ul li ul li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+		font-size: 15px;
+	}
 	.navigation li a {
 		display: block;
 		color: #000;
 		padding: 8px 16px;
 		text-decoration: none;
+		font-size: 15px;
 	}
 
 	.navigation li a.active {
@@ -42,28 +64,37 @@
 	</style>
 	
 ### Body
-	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px;'>Share Economy Inc. Style Guide</h1>
+	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px;'>Share Economy Inc. Style Guide</h1>
 	<div class='navigation'>
 		<ul>
-			<li><a href='#typography'>Typography</a></li>
-			<li><a href='#buttons'>Buttons</a></li>
-			<li><a href='#image'>Images</a></li>
-			<li><a href='#list'>Lists</a></li>
-			<li><a href='#data-table'>Tables</a></li>
-			<li><a href='#navmenu'>Navigation</a></li>
-			<li><a href='#text-field'>Text Fields</a></li>
-			<li><a href='#test-area'>Text Areas</a></li>
-			<li><a href='#checkbox-buttons'>Checkboxes</a></li>
-			<li><a href='#radio-buttons'>Radio Buttons</a></li>
-			<li><a href='#dropdown-menu'>Dropdown Menus</a></li>
-			<li><a href='#alert'>Alerts</a></li>
-			<li><a href='#headings'>Headings</a></li><li>
-			<li><a href='#paragraph'>Paragraphs</a></li>
-			<li><a href='#links'>Links</a></li>
+			<li><a href='#styleguide-purpose-and-philosophy'>Styleguide Purpose and Philosophy</a></li>
 			<li><a href='#grid-layout'>Page Layout</a></li>
 			<li><a href='#color-palette'>Color Palette</a></li>
-			<li><a href='#'></a></li>
-			<li><a href='#'></a></li>
+			<li><a href='#typography'>Typography</a></li>
+			<li><a href='#headings'>Headings</a></li>
+			<li><a href='#paragraphs'>Paragraphs</a></li>
+			<li><a href='#links'>Links</a></li>
+			<li><a href='#buttons'>Buttons</a></li>
+			<li><a href='#images'>Images</a></li>
+			<li><a href='#lists'>Lists</a></li>
+			<li><a href='#data-tables'>Tables</a></li>
+			<li><a href='#navmenu'>Navigation</a></li>
+			<li><a href='#form-elements'>Form Elements</a>
+				<ul>
+					<li><a href='#text-fields'>Text Fields</a></li>
+					<li><a href='#text-areas'>Text Areas</a></li>
+					<li><a href='#checkboxes'>Checkboxes</a></li>
+					<li><a href='#radio-buttons'>Radio Buttons</a></li>
+					<li><a href='#dropdown-menus'>Dropdown Menus</a></li>
+				</ul>
+			</li>
+			<li><a href='#text-fields'>Text Fields</a></li>
+			<li><a href='#text-areas'>Text Areas</a></li>
+			<li><a href='#checkboxes'>Checkboxes</a></li>
+			<li><a href='#radio-buttons'>Radio Buttons</a></li>
+			<li><a href='#dropdown-menus'>Dropdown Menus</a></li>
+			<li><a href='#alerts'>Alerts</a></li>
+			<li><a href='#popups'>Popups</a></li>
 		</ul>
 	</div>
 	<div style='margin-left:25%;padding:1px 16px;height:1000px;' class='sg-container' sg-content></div>
