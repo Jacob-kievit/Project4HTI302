@@ -586,3 +586,35 @@ p a{
  * 		@example
  *		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%'>
  */
+
+
+/***
+ * Popups:
+ */
+
+/**
+ * Popups:
+ * `.popup` - Popups are used primarily to let the user know something like they have Caps lock on or their password is weak.
+ *
+ *		@example
+ *		<p>enter a matching password and hit submit to see the popup</p>
+ *
+ *		<form name="form" onsubmit="myFunction();">
+ *			<input class='text' type="password" name="pass1" class="popuptext" id="myPopup"> Please enter password <br> 
+ *		  	<input class='text' type="password" name="pass2" class="popuptext"> Please enter password again <br>
+ *		  	<input type="SUBMIT" value="submit">
+ *		  	<script>
+ *				function myFunction() {
+ *					if (form.pass1.value = form.pass2.value) {
+ *						var popup = document.getElementById("myPopup");
+ *						popup.classList.toggle("show");
+ *					}
+ *				}
+ *		  	</script>
+ *		</form>
+ */
+
+.popup {
+	
+	padding: 10px;
+}
