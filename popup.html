@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.popup {
+    position: relative;
+}
+
+.popup .popupText {
+    visibility: hidden;
+    width: 100px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 2px 2px 2px 2px;
+    position: absolute;
+    bottom: .000001%; /* yep */
+    left: 110%;
+	z-index: 1;  
+}
+
+.popup .show {
+    visibility: visible;
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1 ;}
+}
+</style>
+</head>
+<body>
+
+
+	<P>Click to show a example popup</p>
+	<button class="popup" onclick="myFunction()">CLICK ME<span class="popupText" id="thePopUp">Wooohooooo</span></button>
+	<script>
+		function myFunction() {
+			var popup = document.getElementById("thePopUp");
+			popup.classList.toggle("show");
+
+		}
+	</script>
+
+</body>
+</html>
