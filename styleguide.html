@@ -739,19 +739,19 @@
         <div class="sg-canvas">
           <p>Click the button to display a example alert</p>
 
-          <button onclick="myFunction()">ALERT</button>
+          <button onclick="showAlert()">ALERT</button>
 
           <script>
-            function myFunction() {
+            function showAlert() {
               alert(" You will be signed out in 10 minutes due to inactivity");
             }
           </script>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Click the button to display a example alert<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;myFunction()&quot;</span>&gt;</span>ALERT<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;showAlert()&quot;</span>&gt;</span>ALERT<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showAlert</span><span class="hljs-params">()</span> </span>{
     alert(<span class="hljs-string">&quot; You will be signed out in 10 minutes due to inactivity&quot;</span>);
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></pre>
@@ -762,42 +762,34 @@
       <h2 id="popups" class="sg">Popups</h2>
       <p class="sg">
         <code class="sg">.popup</code>- Popups are used primarily to let the user know something like they have Caps lock on or their password is weak.</p>
+      <p class="sg">
+        <code class="sg">.popupText</code>- This class is used to style the popup&apos;s text.</p>
+      <p class="sg">
+        <code class="sg">.showPopup</code>- this class is toggled by javascript and is what controls the popup&apos;s visibility.</p>
       <div class="sg-example">
         <div class="sg-canvas">
-          <p>enter a matching password and hit submit to see the popup</p>
+          <p>Click to show a example popup</p>
+          <button class="popup" onclick="popup()">CLICK ME
+            <span class="popupText" id="thePopUp">Wooohooooo</span>
+          </button>
+          <script>
+            function popup() {
+              var popup = document.getElementById("thePopUp");
+              popup.classList.toggle("showPopup");
 
-          <form name="form" onsubmit="myFunction();">
-            <input class="text" type="password" name="pass1" id="myPopup">Please enter password
-            <br>
-            <input class="text" type="password" name="pass2">Please enter password again
-            <br>
-            <input type="SUBMIT" value="submit">
-            <script>
-              function myFunction() {
-                if (form.pass1.value = form.pass2.value) {
-                  var popup = document.getElementById("myPopup");
-                  popup.classList.toggle("show");
-                }
-              }
-            </script>
-          </form>
-        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>enter a matching password and hit submit to see the popup<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            }
+          </script>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Click to show a example popup<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popup&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;popup()&quot;</span>&gt;</span>CLICK ME
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popupText&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;thePopUp&quot;</span>&gt;</span>Wooohooooo<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">popup</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">var</span> popup = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;thePopUp&quot;</span>);
+    popup.classList.toggle(<span class="hljs-string">&quot;showPopup&quot;</span>);
 
-<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;form&quot;</span> <span class="hljs-attribute">onsubmit</span>=<span class="hljs-value">&quot;myFunction();&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;text&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;password&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;pass1&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popuptext&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;myPopup&quot;</span>&gt;</span>Please enter password
-  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;text&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;password&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;pass2&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popuptext&quot;</span>&gt;</span>Please enter password again
-  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;SUBMIT&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;submit&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myFunction</span><span class="hljs-params">()</span> </span>{
-      <span class="hljs-keyword">if</span> (form.pass1.value = form.pass2.value) {
-        <span class="hljs-keyword">var</span> popup = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;myPopup&quot;</span>);
-        popup.classList.toggle(<span class="hljs-string">&quot;show&quot;</span>);
-      }
-    }
-  </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span></pre>
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></pre>
       </div>
     </section>
 

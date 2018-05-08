@@ -582,10 +582,10 @@ p a{
  *		@example
  *		<p>Click the button to display a example alert</p>
  *
- *		<button onclick="myFunction()">ALERT</button>
+ *		<button onclick="showAlert()">ALERT</button>
  *
  *		<script>
- *			function myFunction() {
+ *			function showAlert() {
  *				alert(" You will be signed out in 10 minutes due to inactivity");
  *			}
  *		</script>
@@ -607,9 +607,9 @@ p a{
  *
  *		@example
  *		<p>Click to show a example popup</p>
- *		<button class="popup" onclick="myFunction()">CLICK ME<span class="popupText" id="thePopUp">Wooohooooo</span></button>
+ *		<button class="popup" onclick="popup()">CLICK ME<span class="popupText" id="thePopUp">Wooohooooo</span></button>
  *		<script>
- *			function myFunction() {
+ *			function popup() {
  *				var popup = document.getElementById("thePopUp");
  *				popup.classList.toggle("showPopup");
  *
