@@ -25,7 +25,7 @@ body {
 */
 
 /**
-* Grid Layout:
+* Classes:
 *
 * `.section` - splits up the page horizontally. You'll need a few of these to break up the content, and you can use them
 * in your main wrapper, or within other divs.
@@ -177,24 +177,65 @@ body {
 
 /***
  * Color palette:
- * These are the colors for the website:
+ */
+ 
+ /**
+ * Primary Colors:
  *
- * `#74f2b3` - Used for buttons.
+ * `#74f2b3` - Used for hovered buttons.
  *
- * `#105934` - Used for the navbar background color.
+ * `#105934` - Used for the navbar background color and default button color.
  *
- * `#76bf6f` - Used as the hover effect for the navbar background color and the active tab.
+ * `#76bf6f` - Used as the hover effect for the navbar background color and the active tab. Also used as the background color of clicked or "active" buttons.
  *
  * `#c774f2` - Used for links.
  *
  * `#c5a5c7` - Used for visited links and hovered links.
  *
- * `#ffffff` - White. Used for default background color.
+ * 		@example
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='74f2b3.png'><br>
+ *		<p class='color-label'>#74f2b3</p>
+ *		</div>
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='105934.png'><br>
+ *		<p class='color-label'>#105934</p>
+ *		</div>
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='76bf6f.png'><br>
+ *		<p class='color-label'>#76bf6f</p>
+ *		</div>
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='c5a5c7.png'><br>
+ *		<p class='color-label'>#c5a5c7</p>
+ *		</div>
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='c774f2.png'><br>
+ *		<p class='color-label'>#c774f2</p>
+ *		</div>
+ */
+ .color-label {
+	 text-align: center;
+	 padding: 0 0 10px 0;
+	 margin: 0;
+ }
+ 
+ /**
+ * General Colors:
+ *
+ * `#ffffff` - White. Used for default background color and instances where white text is required for readability.
  *
  * `#000000` - Black. Used for all general and non-heading text. This may be ovveriden in special circumstances.
  *
- * 		@example
- *		<img src='project4_color_palette.png' style='max-width: 800px; width: 100%'>
+ *		@example
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='ffffff.png'><br>
+ *		<p class='color-label'>#ffffff</p>
+ *		</div>
+ *		<div style='border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;'>
+ *		<img class='img' style='max-width: 100px;' src='000000.png'><br>
+ *		<p class='color-label'>#000000</p>
+ *		</div>
  */
 
 /***
@@ -203,6 +244,7 @@ body {
 
 /**
  * Font:
+ * 
  * `.primary-font` - Used to declare the font for the entier page for Share Economy, Inc. by adding the class to the `body` tag of each page.
  *
  *		@example
@@ -221,6 +263,7 @@ body {
 
 /**
 * Heading 1:
+* 
 * `h1` - Used soley for the names of the service/provider.
 *
 *		@example
@@ -234,6 +277,7 @@ h1{
 
 /**
 * Heading 2:
+*
 * `h2` - Used for paragraph and description headings.
 *
 *		@example
@@ -246,6 +290,7 @@ h2{
 
 /**
 * Heading 3:
+*
 * `h3` - Used for subheadings on lists, etc. within the heading 2 sections.
 *
 *		@example
@@ -258,6 +303,7 @@ h3{
 
 /**
 * Heading 4:
+*
 * `h4` - Used for footer headings only.
 *
 *		@example
@@ -270,6 +316,7 @@ h4{
 
 /**
 * Heading 5:
+*
 * `h5` - Used for footer links and text under Header 4.
 *
 *		@example
@@ -282,6 +329,7 @@ h5{
 
 /**
 * Heading 6:
+*
 * `h6` - Used for copyright on footer.
 *
 *		@example
@@ -294,6 +342,7 @@ h6{
 
 /***
 * Paragraphs:
+*
 * `p` - Used for general content text. Font size is 12pt with a medium weight and a normal line height. All text should be left-aligned by default, unless otherwise specified in another id or class.
 *
 *		@example
@@ -312,6 +361,7 @@ p {
 
 /**
 * Basic Links:
+*
 * `a` - Used whenever a link is needed.
 *
 *		@example
@@ -331,6 +381,7 @@ a:visited{
 
 /**
 * Links inside paragraphs:
+*
 * `a` - Used whenever a link is needed inside of a normal paragraph.
 *
 *		@example
@@ -343,12 +394,8 @@ p a{
 
 /***
  * Buttons:
- */
-
-/**
- * Button:
- * `.btn` - Buttons are used primarily to link to pages in the general body of the website; links not in the 
- * navbar.
+ *
+ * `.btn` - Buttons are used primarily to link to pages in the general body of the website; links not in the navbar.
  *
  *		@example
  *		<button class='btn'>Primary button</button>
@@ -356,27 +403,37 @@ p a{
 
 .btn {
 	font-size: 15px;
-	background-color: #74f2b3;
+	background-color: #105934;
 	padding: 10px;
 	text-decoration: none;
+	border-style: none;
+	color: #ffffff;
+}
+.btn:hover {
+	background-color: #74f2b3;
+	color: #000000;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:active {
+	background-color: #76bf6f;
+	color: #000000
 }
 
 /***
  * Images:
- */
-
-/**
- * Images:
- * `img` - Images should always have `width="100%"` with the height auto-calculated. They should also have a `max-width` property to ensure that the image does not get too large on larger screens.
+ *
+ *
+ * `.img` - Images should always have `width="100%"` with the height auto-calculated. They should also have a `max-width` property to ensure that the image does not get too large on larger screens.
  *
  *		@example
- *		 <img class='img' src="tomi.jpg" alt="Our wonderful professor, Tomi" width="100%" style="max-width: 150px;"> 
+ *		 <img class='img' src="tomi.jpg" alt="Our wonderful professor, Tomi" style="max-width: 150px;"> 
  */
 
 .img {
 	
 	background-color: #ffffff;
 	padding: 10px;
+	width: 100%;
 }
 
 /***
@@ -385,6 +442,7 @@ p a{
 
 /**
  * Lists:
+ *
  * `.list` - Used to show lists in general content areas.
  *
  *		@example
@@ -402,11 +460,8 @@ p a{
 }
 
 /***
- * Data Tables:
- */
-
-/**
  * Tables:
+ *
  * `.table` - Tables are used primarily to put things in tables.
  *
  *		@example
@@ -437,10 +492,7 @@ p a{
  
  /***
  * Navmenu:
- */
- 
- /**
- * Navmenu:
+ *
  * `.nav` - Used to contain the navbar.
  * 
  * `.nav ul` - Used to style the list for the main navigation bar.
@@ -500,6 +552,7 @@ p a{
 
 /**
  * Text Fields:
+ *
  * `.text-field` - Text inputs are used to enter text where only one line of short input is needed.
  *
  *		@example
@@ -514,6 +567,7 @@ p a{
 
 /**
  * Text Areas:
+ *
  * `.area` - Text Areas are used primarily to enter large amounts of text such as reviews and messages.
  *
  *		@example
@@ -528,6 +582,7 @@ p a{
 
 /**
  * Checkboxes:
+ *
  * `.checkbox` - Checkbox buttons are used primarily to confirm a user agrees to something such as a user agreement or to have them select multiple values from a list in a form.
  *
  *		@example
@@ -541,13 +596,14 @@ p a{
 
 /**
  * Radio buttons:
+ *
  * `.radio` - Radio buttons are used primarily to enter multiple choice answers or make selections where only one answer is allowed.
  *
  *		@example
- *		<input class= 'radio' type="radio" name="A" value="A"> A<br>
- *		<input class= 'radio' type="radio" name="B" value="B"> B<br>
- *		<input class= 'radio' type="radio" name="C" value="C"> C<br>
- * 		<input class= 'radio' type="radio" name="D" value="D"> D<br>
+ *		<input class= 'radio' type="radio" name="test" value="A"> A<br>
+ *		<input class= 'radio' type="radio" name="test" value="B"> B<br>
+ *		<input class= 'radio' type="radio" name="test" value="C"> C<br>
+ * 		<input class= 'radio' type="radio" name="test" value="D"> D<br>
  */
 
 .radio {

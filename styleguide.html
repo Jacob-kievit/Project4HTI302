@@ -68,7 +68,7 @@
 </head>
 
 <body class="sg">
-  <h1 style="position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px;">Share Economy Inc. Style Guide</h1>
+  <h1 style="position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;">Share Economy Inc. Style Guide</h1>
   <div class="navigation">
     <ul>
       <li>
@@ -167,9 +167,9 @@
 
     <section class="sg-section sg-section-grid-layout">
       <h2 id="grid-layout" class="sg">Grid Layout</h2>
-      <section class="sg-block sg-section-grid-layout">
+      <section class="sg-block sg-section-classes">
         <div class="sg-text">
-          <h3 id="grid-layout" class="sg">Grid Layout</h3>
+          <h3 id="classes" class="sg">Classes</h3>
           <p class="sg">
             <code class="sg">.section</code>- splits up the page horizontally. You&apos;ll need a few of these to break up the content, and you can use them in your main wrapper, or within other divs.</p>
           <p class="sg">
@@ -177,7 +177,7 @@
           <p class="sg">
             <code class="sg">.group</code>- solves floating problems, by forcing the section to self clear its children (aka the clearfix hack). This is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.</p>
           <p class="sg">
-            <code class="sg">.span_1_of_3</code>- specifies the width of the column. Using percentages means it&apos;s 100% fluid.</p>
+            <code class="sg">.span_X_of_10</code>- specifies the width of the column. Using percentages means it&apos;s 100% fluid.</p>
           <p class="sg">
             <code class="sg">@media queries</code>- as soon as the screen size gets less than 480 pixels the columns stack and the margins disappear. Any sections within the site that need different widths above 480 pixels at varying breakpoints should have a media query declared to adjust the number of columns they span.</p>
           <p class="sg">Note: Columns in the example are only colored to more clearly show column size.</p>
@@ -318,28 +318,108 @@
 
     <section class="sg-section sg-section-color-palette">
       <h2 id="color-palette" class="sg">Color palette</h2>
-      <p class="sg">These are the colors for the website:</p>
-      <p class="sg">
-        <code class="sg">#74f2b3</code>- Used for buttons.</p>
-      <p class="sg">
-        <code class="sg">#105934</code>- Used for the navbar background color.</p>
-      <p class="sg">
-        <code class="sg">#76bf6f</code>- Used as the hover effect for the navbar background color and the active tab.</p>
-      <p class="sg">
-        <code class="sg">#c774f2</code>- Used for links.</p>
-      <p class="sg">
-        <code class="sg">#c5a5c7</code>- Used for visited links and hovered links.</p>
-      <p class="sg">
-        <code class="sg">#ffffff</code>- White. Used for default background color.</p>
-      <p class="sg">
-        <code class="sg">#000000</code>- Black. Used for all general and non-heading text. This may be ovveriden in special circumstances.</p>
-      <div class="sg-example">
-        <div class="sg-canvas">
-          <ple></ple>
-          <img src="project4_color_palette.png" style="max-width: 800px; width: 100%">
-        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ple</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ple</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;project4_color_palette.png&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 800px; width: 100%&apos;</span>&gt;</span></pre>
-      </div>
+      <section class="sg-block sg-section-primary-colors">
+        <div class="sg-text">
+          <h3 id="primary-colors" class="sg">Primary Colors</h3>
+          <p class="sg">
+            <code class="sg">#74f2b3</code>- Used for hovered buttons.</p>
+          <p class="sg">
+            <code class="sg">#105934</code>- Used for the navbar background color and default button color.</p>
+          <p class="sg">
+            <code class="sg">#76bf6f</code>- Used as the hover effect for the navbar background color and the active tab. Also used as the background color of clicked or &quot;active&quot; buttons.</p>
+          <p class="sg">
+            <code class="sg">#c774f2</code>- Used for links.</p>
+          <p class="sg">
+            <code class="sg">#c5a5c7</code>- Used for visited links and hovered links.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <ple></ple>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="74f2b3.png">
+              <br>
+              <p class="color-label">#74f2b3</p>
+            </div>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="105934.png">
+              <br>
+              <p class="color-label">#105934</p>
+            </div>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="76bf6f.png">
+              <br>
+              <p class="color-label">#76bf6f</p>
+            </div>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="c5a5c7.png">
+              <br>
+              <p class="color-label">#c5a5c7</p>
+            </div>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="c774f2.png">
+              <br>
+              <p class="color-label">#c774f2</p>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">ple</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ple</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;74f2b3.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#74f2b3<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;105934.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#105934<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;76bf6f.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#76bf6f<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;c5a5c7.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#c5a5c7<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;c774f2.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#c774f2<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+      <section class="sg-block sg-section-general-colors">
+        <div class="sg-text">
+          <h3 id="general-colors" class="sg">General Colors</h3>
+          <p class="sg">
+            <code class="sg">#ffffff</code>- White. Used for default background color and instances where white text is required for readability.</p>
+          <p class="sg">
+            <code class="sg">#000000</code>- Black. Used for all general and non-heading text. This may be ovveriden in special circumstances.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="ffffff.png">
+              <br>
+              <p class="color-label">#ffffff</p>
+            </div>
+            <div style="border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;">
+              <img class="img" style="max-width: 100px;" src="000000.png">
+              <br>
+              <p class="color-label">#000000</p>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;ffffff.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#ffffff<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;border: 1px solid black; display: inline-block; margin: 0 10px 10px 0;&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&apos;max-width: 100px;&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&apos;000000.png&apos;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;color-label&apos;</span>&gt;</span>#000000<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
     </section>
 
     <section class="sg-section sg-section-typography">
@@ -488,37 +568,26 @@
 
     <section class="sg-section sg-section-buttons">
       <h2 id="buttons" class="sg">Buttons</h2>
-      <section class="sg-block sg-section-button">
-        <div class="sg-text">
-          <h3 id="button" class="sg">Button</h3>
-          <p class="sg">
-            <code class="sg">.btn</code>- Buttons are used primarily to link to pages in the general body of the website; links not in the navbar.
-          </p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <button class="btn">Primary button</button>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;btn&apos;</span>&gt;</span>Primary button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
-        </div>
-      </section>
+      <p class="sg">
+        <code class="sg">.btn</code>- Buttons are used primarily to link to pages in the general body of the website; links not in the navbar.</p>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <button class="btn">Primary button</button>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;btn&apos;</span>&gt;</span>Primary button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
+      </div>
     </section>
 
     <section class="sg-section sg-section-images">
       <h2 id="images" class="sg">Images</h2>
-      <section class="sg-block sg-section-images">
-        <div class="sg-text">
-          <h3 id="images" class="sg">Images</h3>
-          <p class="sg">
-            <code class="sg">img</code>- Images should always have
-            <code class="sg">width=&quot;100%&quot;</code>with the height auto-calculated. They should also have a
-            <code class="sg">max-width</code>property to ensure that the image does not get too large on larger screens.</p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <img class="img" src="tomi.jpg" alt="Our wonderful professor, Tomi" width="100%" style="max-width: 150px;">
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;tomi.jpg&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Our wonderful professor, Tomi&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">&quot;100%&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;max-width: 150px;&quot;</span>&gt;</span></pre>
-        </div>
-      </section>
+      <p class="sg">
+        <code class="sg">.img</code>- Images should always have
+        <code class="sg">width=&quot;100%&quot;</code>with the height auto-calculated. They should also have a
+        <code class="sg">max-width</code>property to ensure that the image does not get too large on larger screens.</p>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <img class="img" src="tomi.jpg" alt="Our wonderful professor, Tomi" style="max-width: 150px;">
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;img&apos;</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;tomi.jpg&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;Our wonderful professor, Tomi&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;max-width: 150px;&quot;</span>&gt;</span></pre>
+      </div>
     </section>
 
     <section class="sg-section sg-section-lists">
@@ -545,34 +614,30 @@
       </section>
     </section>
 
-    <section class="sg-section sg-section-data-tables">
-      <h2 id="data-tables" class="sg">Data Tables</h2>
-      <section class="sg-block sg-section-tables">
-        <div class="sg-text">
-          <h3 id="tables" class="sg">Tables</h3>
-          <p class="sg">
-            <code class="sg">.table</code>- Tables are used primarily to put things in tables.</p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <table class="table" style="width:100%">
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-              </tr>
-              <tr>
-                <td>jon</td>
-                <td>doe</td>
-                <td>50</td>
-              </tr>
-              <tr>
-                <td>jane</td>
-                <td>doe</td>
-                <td>49</td>
-              </tr>
-            </table>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;table&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;width:100%&quot;</span>&gt;</span>
+    <section class="sg-section sg-section-tables">
+      <h2 id="tables" class="sg">Tables</h2>
+      <p class="sg">
+        <code class="sg">.table</code>- Tables are used primarily to put things in tables.</p>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <table class="table" style="width:100%">
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>jon</td>
+              <td>doe</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>jane</td>
+              <td>doe</td>
+              <td>49</td>
+            </tr>
+          </table>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;table&apos;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;width:100%&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">th</span>&gt;</span>Last Name<span class="hljs-tag">&lt;/<span class="hljs-title">th</span>&gt;</span>
@@ -589,42 +654,37 @@
     <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>49<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
-        </div>
-      </section>
+      </div>
     </section>
 
     <section class="sg-section sg-section-navmenu">
       <h2 id="navmenu" class="sg">Navmenu</h2>
-      <section class="sg-block sg-section-navmenu">
-        <div class="sg-text">
-          <h3 id="navmenu" class="sg">Navmenu</h3>
-          <p class="sg">
-            <code class="sg">.nav</code>- Used to contain the navbar.</p>
-          <p class="sg">
-            <code class="sg">.nav ul</code>- Used to style the list for the main navigation bar.</p>
-          <p class="sg">
-            <code class="sg">.nav li</code>- Used to make the navbar contents float left.</p>
-          <p class="sg">
-            <code class="sg">.nav li a</code>- Used to style the individual links.</p>
-          <p class="sg">
-            <code class="sg">.nav li a:hover</code>- Used to style the individual links on hover.</p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <div class="nav">
-              <ul>
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Item 2</a>
-                </li>
-                <li>
-                  <a>Item 3</a>
-                </li>
-              </ul>
-            </div>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;nav&apos;</span>&gt;</span>
+      <p class="sg">
+        <code class="sg">.nav</code>- Used to contain the navbar.</p>
+      <p class="sg">
+        <code class="sg">.nav ul</code>- Used to style the list for the main navigation bar.</p>
+      <p class="sg">
+        <code class="sg">.nav li</code>- Used to make the navbar contents float left.</p>
+      <p class="sg">
+        <code class="sg">.nav li a</code>- Used to style the individual links.</p>
+      <p class="sg">
+        <code class="sg">.nav li a:hover</code>- Used to style the individual links on hover.</p>
+      <div class="sg-example">
+        <div class="sg-canvas">
+          <div class="nav">
+            <ul>
+              <li>
+                <a>Item 1</a>
+              </li>
+              <li>
+                <a>Item 2</a>
+              </li>
+              <li>
+                <a>Item 3</a>
+              </li>
+            </ul>
+          </div>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;nav&apos;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-title">a</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
@@ -637,8 +697,7 @@
     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
-        </div>
-      </section>
+      </div>
     </section>
 
     <section class="sg-section sg-section-form-elements">
@@ -689,21 +748,21 @@
         </div>
         <div class="sg-example">
           <div class="sg-canvas">
-            <input class="radio" type="radio" name="A" value="A">A
+            <input class="radio" type="radio" name="test" value="A">A
             <br>
-            <input class="radio" type="radio" name="B" value="B">B
+            <input class="radio" type="radio" name="test" value="B">B
             <br>
-            <input class="radio" type="radio" name="C" value="C">C
+            <input class="radio" type="radio" name="test" value="C">C
             <br>
-            <input class="radio" type="radio" name="D" value="D">D
+            <input class="radio" type="radio" name="test" value="D">D
             <br>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;A&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;A&quot;</span>&gt;</span>A
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;test&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;A&quot;</span>&gt;</span>A
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;B&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;B&quot;</span>&gt;</span>B
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;test&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;B&quot;</span>&gt;</span>B
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;C&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;C&quot;</span>&gt;</span>C
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;test&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;C&quot;</span>&gt;</span>C
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;D&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;D&quot;</span>&gt;</span>D
+<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;radio&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;radio&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;test&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;D&quot;</span>&gt;</span>D
 <span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span></pre>
         </div>
       </section>
