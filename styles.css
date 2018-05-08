@@ -36,7 +36,7 @@ body {
 * `.group` - solves floating problems, by forcing the section to self clear its children (aka the clearfix hack). This
 * is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
 *
-* `.span_1_of_3` - specifies the width of the column. Using percentages means it's 100% fluid.
+* `.span_X_of_10` - specifies the width of the column. Using percentages means it's 100% fluid.
 *
 * `@media queries` - as soon as the screen size gets less than 480 pixels the columns stack and the margins disappear. Any sections within the site that need different widths above 480 pixels at varying breakpoints should have a media query declared to adjust the number of columns they span.
 * 
