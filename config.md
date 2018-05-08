@@ -64,7 +64,7 @@
 	</style>
 	
 ### Body
-	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px;'>Share Economy Inc. Style Guide</h1>
+	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;'>Share Economy Inc. Style Guide</h1>
 	<div class='navigation'>
 		<ul>
 			<li><a href='#styleguide-purpose-and-philosophy'>Styleguide Purpose and Philosophy</a></li>
