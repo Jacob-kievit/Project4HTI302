@@ -1,5 +1,5 @@
 body {
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
 }
 
 /***
@@ -273,6 +273,8 @@ h1{
 	font-size: 48px;
 	margin: 10px 10px 10px 0;
 	padding-bottom: 5px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;
 }
 
 /**
@@ -286,6 +288,8 @@ h1{
 h2{
 	font-size: 34px;
 	margin: 10px 10px 10px 0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;
 }
 
 /**
@@ -299,6 +303,8 @@ h2{
 h3{
 	font-size: 24px;
 	margin: 10px 10px 10px 0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;
 }
 
 /**
@@ -312,32 +318,8 @@ h3{
 h4{
 	font-size: 17px;
 	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 5:
-*
-* `h5` - Used for footer links and text under Header 4.
-*
-*		@example
-*		<h5>Heading 5</h5>
-*/
-h5{
-	font-size: 12px;
-	margin: 10px 10px 10px 0;
-}
-
-/**
-* Heading 6:
-*
-* `h6` - Used for copyright on footer.
-*
-*		@example
-*		<h6>Heading 6</h6>
-*/
-h6{
-	font-size: 11px;
-	margin: 10px 10px 10px 0;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 700;
 }
 
 /***
@@ -556,13 +538,16 @@ p a{
  * `.text-field` - Text inputs are used to enter text where only one line of short input is needed.
  *
  *		@example
- *		<input class='text' type="text" name="fname">
+ *		<input class='text-field' type="text" name="fname">
  */
 
 .text-field {
 	
 	background-color: #ffffff;
 	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid darkgrey;
 }
 
 /**
@@ -578,6 +563,9 @@ p a{
 	
 	background-color: #ffffff;
 	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	resize: vertical;
 }
 
 /**
@@ -626,30 +614,42 @@ p a{
  */
 
 .select {
-	
+	border-radius: 5px;
 	padding: 10px;
 }
 
 /***
  * Alerts:
  *
- * `.alert` - Alerts are used primarily to alert a user to a specific event or error that has occured.
+ * `#alert` - Alerts are used primarily to alert a user to a specific event or error that has occured. This element relies on javascript to function and will need to be passed a string variable to display in the alert box when calling the function `customAlert`.
+ *
+ *	Note: The styles for this alert box use the open-source CSS from w3schools, so you must make sure that `<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">` is declared in your page header.
  *
  *		@example
- *		<p>Click the button to display a example alert</p>
- *
- *		<button onclick="showAlert()">ALERT</button>
- *
+ *		<div id="alert" class="w3-modal">
+ *		<div class="w3-modal-content">
+ *		<header class="w3-container"> 
+ *		<span onclick="document.getElementById('alert').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+ *		<h2>Alert Header</h2>
+ *		</header>
+ *		<div class="w3-container">
+ *		<p id="alert-text"></p>
+ *		</div>
+ *		</div>
+ *		</div>
+ *		
  *		<script>
- *			function showAlert() {
- *				alert(" You will be signed out in 10 minutes due to inactivity");
- *			}
+ *		function customAlert (message) {
+ *		document.getElementById('alert').style.display='block';
+ *		document.getElementById('alert-text').innerHTML=message;
+ *		}
  *		</script>
+ *		<button class="btn" onclick="customAlert('This is an example of an alert box!');">Alert!</button>
  */
 
-.alert {
-	
-	padding: 10px;
+#alert header {
+	background-color: #105934;
+	color: #ffffff;
 }
 
 /***
@@ -663,7 +663,7 @@ p a{
  *
  *		@example
  *		<p>Click to show a example popup</p>
- *		<button class="popup" onclick="popup()">CLICK ME<span class="popupText" id="thePopUp">Wooohooooo</span></button>
+ *		<button class="popup btn" onclick="popup()">CLICK ME<span class="popupText" id="thePopUp">Wooohooooo</span></button>
  *		<script>
  *			function popup() {
  *				var popup = document.getElementById("thePopUp");
@@ -675,6 +675,7 @@ p a{
 
 .popup {
 	position: relative;
+	outline: none;
 }
 
 .popup .popupText {

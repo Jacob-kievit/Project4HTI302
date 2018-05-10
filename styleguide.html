@@ -7,11 +7,13 @@
   <meta name="viewport" content="width-device-width, initial-scale-1">
   <script src="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
       margin: 0;
       min-width: 750px;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
     }
     .navigation {
       padding-top: 69px;
@@ -30,24 +32,12 @@
       overflow: auto;
       /* Enable scrolling if the sidenav has too much content */
     }
+    .indented {
+      padding-left: 12px;
+    }
     .navigation ul li {
       display: block;
       height: auto;
-    }
-    .navigation ul li ul {
-      display: block;
-      height: auto;
-    }
-    .navigation ul li ul li {
-      padding-left: 10px;
-      min-width: 155px;
-    }
-    .navigation ul li ul li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-      font-size: 15px;
     }
     .navigation li a {
       display: block;
@@ -68,7 +58,7 @@
 </head>
 
 <body class="sg">
-  <h1 style="position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;">Share Economy Inc. Style Guide</h1>
+  <h1 style="position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;font-family: &quot;Palatino Linotype&quot;, &quot;Book Antiqua&quot;, Palatino, serif !important;">Share Economy Inc. Style Guide</h1>
   <div class="navigation">
     <ul>
       <li>
@@ -109,37 +99,20 @@
       </li>
       <li>
         <a href="#form-elements">Form Elements</a>
-        <ul>
-          <li>
-            <a href="#text-fields">Text Fields</a>
-          </li>
-          <li>
-            <a href="#text-areas">Text Areas</a>
-          </li>
-          <li>
-            <a href="#checkboxes">Checkboxes</a>
-          </li>
-          <li>
-            <a href="#radio-buttons">Radio Buttons</a>
-          </li>
-          <li>
-            <a href="#dropdown-menus">Dropdown Menus</a>
-          </li>
-        </ul>
       </li>
-      <li>
+      <li class="indented">
         <a href="#text-fields">Text Fields</a>
       </li>
-      <li>
+      <li class="indented">
         <a href="#text-areas">Text Areas</a>
       </li>
-      <li>
+      <li class="indented">
         <a href="#checkboxes">Checkboxes</a>
       </li>
-      <li>
+      <li class="indented">
         <a href="#radio-buttons">Radio Buttons</a>
       </li>
-      <li>
+      <li class="indented">
         <a href="#dropdown-menus">Dropdown Menus</a>
       </li>
       <li>
@@ -494,30 +467,6 @@
           </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span>&gt;</span>Heading 4<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span></pre>
         </div>
       </section>
-      <section class="sg-block sg-section-heading-5">
-        <div class="sg-text">
-          <h3 id="heading-5" class="sg">Heading 5</h3>
-          <p class="sg">
-            <code class="sg">h5</code>- Used for footer links and text under Header 4.</p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <h5>Heading 5</h5>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h5</span>&gt;</span>Heading 5<span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span></pre>
-        </div>
-      </section>
-      <section class="sg-block sg-section-heading-6">
-        <div class="sg-text">
-          <h3 id="heading-6" class="sg">Heading 6</h3>
-          <p class="sg">
-            <code class="sg">h6</code>- Used for copyright on footer.</p>
-        </div>
-        <div class="sg-example">
-          <div class="sg-canvas">
-            <h6>Heading 6</h6>
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">h6</span>&gt;</span>Heading 6<span class="hljs-tag">&lt;/<span class="hljs-title">h6</span>&gt;</span></pre>
-        </div>
-      </section>
     </section>
 
     <section class="sg-section sg-section-paragraphs">
@@ -710,8 +659,8 @@
         </div>
         <div class="sg-example">
           <div class="sg-canvas">
-            <input class="text" type="text" name="fname">
-          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;text&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;fname&quot;</span>&gt;</span></pre>
+            <input class="text-field" type="text" name="fname">
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&apos;text-field&apos;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;fname&quot;</span>&gt;</span></pre>
         </div>
       </section>
       <section class="sg-block sg-section-text-areas">
@@ -793,27 +742,50 @@
     <section class="sg-section sg-section-alerts">
       <h2 id="alerts" class="sg">Alerts</h2>
       <p class="sg">
-        <code class="sg">.alert</code>- Alerts are used primarily to alert a user to a specific event or error that has occured.</p>
+        <code class="sg">#alert</code>- Alerts are used primarily to alert a user to a specific event or error that has occured. This element relies on javascript to function and will need to be passed a string variable to display in the alert box when calling the function
+        <code class="sg">customAlert</code>.</p>
+      <p class="sg">Note: The styles for this alert box use the open-source CSS from w3schools, so you must make sure that
+        <code class="sg">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://www.w3schools.com/w3css/4/w3.css&quot;&gt;</code>is declared in your page header.</p>
       <div class="sg-example">
         <div class="sg-canvas">
-          <p>Click the button to display a example alert</p>
-
-          <button onclick="showAlert()">ALERT</button>
+          <div id="alert" class="w3-modal">
+            <div class="w3-modal-content">
+              <header class="w3-container">
+                <span onclick="document.getElementById(&apos;alert&apos;).style.display=&apos;none&apos;" class="w3-button w3-display-topright">&#xD7;</span>
+                <h2>Alert Header</h2>
+              </header>
+              <div class="w3-container">
+                <p id="alert-text"></p>
+              </div>
+            </div>
+          </div>
 
           <script>
-            function showAlert() {
-              alert(" You will be signed out in 10 minutes due to inactivity");
+            function customAlert(message) {
+              document.getElementById('alert').style.display = 'block';
+              document.getElementById('alert-text').innerHTML = message;
             }
           </script>
-        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Click the button to display a example alert<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;showAlert()&quot;</span>&gt;</span>ALERT<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+          <button class="btn" onclick="customAlert(&apos;This is an example of an alert box!&apos;);">Alert!</button>
+        </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;alert&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w3-modal&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w3-modal-content&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">header</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w3-container&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;document.getElementById(&apos;alert&apos;).style.display=&apos;none&apos;&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w3-button w3-display-topright&quot;</span>&gt;</span>&amp;times;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Alert Header<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;w3-container&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;alert-text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showAlert</span><span class="hljs-params">()</span> </span>{
-    alert(<span class="hljs-string">&quot; You will be signed out in 10 minutes due to inactivity&quot;</span>);
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">customAlert</span><span class="hljs-params">(message)</span> </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;alert&apos;</span>).style.display = <span class="hljs-string">&apos;block&apos;</span>;
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;alert-text&apos;</span>).innerHTML = message;
   }
-</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;customAlert(&apos;This is an example of an alert box!&apos;);&quot;</span>&gt;</span>Alert!<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></pre>
       </div>
     </section>
 
@@ -828,7 +800,7 @@
       <div class="sg-example">
         <div class="sg-canvas">
           <p>Click to show a example popup</p>
-          <button class="popup" onclick="popup()">CLICK ME
+          <button class="popup btn" onclick="popup()">CLICK ME
             <span class="popupText" id="thePopUp">Wooohooooo</span>
           </button>
           <script>
@@ -839,7 +811,7 @@
             }
           </script>
         </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Click to show a example popup<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popup&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;popup()&quot;</span>&gt;</span>CLICK ME
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popup btn&quot;</span> <span class="hljs-attribute">onclick</span>=<span class="hljs-value">&quot;popup()&quot;</span>&gt;</span>CLICK ME
   <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;popupText&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;thePopUp&quot;</span>&gt;</span>Wooohooooo<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">

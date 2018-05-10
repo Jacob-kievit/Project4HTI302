@@ -5,11 +5,13 @@
 	<meta name='viewport' content='width-device-width, initial-scale-1' />
 	<script src='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js'></script>
 	<link rel='stylesheet' href='https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css' />
-	<link rel='stylesheet' href='styles.css' />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel='stylesheet' href='styles.css'>
 	<style>
 	body {
 		margin: 0;
 		min-width:750px;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
 	}
 	.navigation {
 		padding-top: 69px;
@@ -25,24 +27,12 @@
 		position: fixed; /* Make it stick, even on scroll */
 		overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	}
+	.indented {
+		padding-left: 12px;
+	}
 	.navigation ul li {
 		display: block;
 		height: auto;
-	}
-	.navigation ul li ul {
-		display: block;
-		height: auto;
-	}
-	.navigation ul li ul li {
-		padding-left: 10px;
-		min-width: 155px;
-	}
-	.navigation ul li ul li a {
-		display: block;
-		color: #000;
-		padding: 8px 16px;
-		text-decoration: none;
-		font-size: 15px;
 	}
 	.navigation li a {
 		display: block;
@@ -64,7 +54,7 @@
 	</style>
 	
 ### Body
-	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;'>Share Economy Inc. Style Guide</h1>
+	<h1 style='position: fixed; width: 100%; background-color: #105934; color: white; margin: 0; padding-left: 10px; min-width: 750px; z-index: 1;font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;'>Share Economy Inc. Style Guide</h1>
 	<div class='navigation'>
 		<ul>
 			<li><a href='#styleguide-purpose-and-philosophy'>Styleguide Purpose and Philosophy</a></li>
@@ -79,20 +69,12 @@
 			<li><a href='#lists'>Lists</a></li>
 			<li><a href='#data-tables'>Tables</a></li>
 			<li><a href='#navmenu'>Navigation</a></li>
-			<li><a href='#form-elements'>Form Elements</a>
-				<ul>
-					<li><a href='#text-fields'>Text Fields</a></li>
-					<li><a href='#text-areas'>Text Areas</a></li>
-					<li><a href='#checkboxes'>Checkboxes</a></li>
-					<li><a href='#radio-buttons'>Radio Buttons</a></li>
-					<li><a href='#dropdown-menus'>Dropdown Menus</a></li>
-				</ul>
-			</li>
-			<li><a href='#text-fields'>Text Fields</a></li>
-			<li><a href='#text-areas'>Text Areas</a></li>
-			<li><a href='#checkboxes'>Checkboxes</a></li>
-			<li><a href='#radio-buttons'>Radio Buttons</a></li>
-			<li><a href='#dropdown-menus'>Dropdown Menus</a></li>
+			<li><a href='#form-elements'>Form Elements</a></li>
+					<li class='indented'><a href='#text-fields'>Text Fields</a></li>
+					<li class='indented'><a href='#text-areas'>Text Areas</a></li>
+					<li class='indented'><a href='#checkboxes'>Checkboxes</a></li>
+					<li class='indented'><a href='#radio-buttons'>Radio Buttons</a></li>
+					<li class='indented'><a href='#dropdown-menus'>Dropdown Menus</a></li>
 			<li><a href='#alerts'>Alerts</a></li>
 			<li><a href='#popups'>Popups</a></li>
 		</ul>
